@@ -31,16 +31,26 @@ public class WeatherManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        UpdateWind();
+    }
+
     private void Update()
     {
         if (testChangeWind)
         {
             testChangeWind = false;
-            windAngle = Random.Range(0, 360);
-            windForce = Mathf.Round(Random.Range(0, maxWindForce));
+            UpdateWind();
         }
 
         BlowWind(windAngle, windForce);
+    }
+
+    private void UpdateWind()
+    {
+        windAngle = Random.Range(0, 360);
+        windForce = Mathf.Round(Random.Range(0, maxWindForce));
     }
 
     private void BlowWind(float angle, float force)
