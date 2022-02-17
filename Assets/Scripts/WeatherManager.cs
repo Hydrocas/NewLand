@@ -16,6 +16,10 @@ public class WeatherManager : MonoBehaviour
 
     private float windAngle = 0;
     private float windForce = 0;
+    private float randomWindAngle;
+    private float randomWindForce;
+    private float previousWindAngle;
+    private float previousWindForce;
 
     public Vector3 WindDirection => windDirection;
     public float WindForce => windForce;
@@ -33,7 +37,7 @@ public class WeatherManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateWind();
+        SetWind();
     }
 
     private void Update()
@@ -47,10 +51,19 @@ public class WeatherManager : MonoBehaviour
         BlowWind(windAngle, windForce);
     }
 
+    private void SetWind()
+    {
+        previousWindAngle = randomWindAngle;
+        previousWindForce = randomWindForce;
+
+        randomWindAngle = Random.Range(0, 360);
+        randomWindForce = Mathf.Round(Random.Range(0, maxWindForce));
+    }
+
     private void UpdateWind()
     {
-        windAngle = Random.Range(0, 360);
-        windForce = Mathf.Round(Random.Range(0, maxWindForce));
+        windAngle = randomWindAngle;
+        windForce = randomWindForce;
     }
 
     private void BlowWind(float angle, float force)
