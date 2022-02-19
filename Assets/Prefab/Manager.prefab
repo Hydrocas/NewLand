@@ -47,6 +47,8 @@ MonoBehaviour:
   windArrow: {fileID: 0}
   windForceText: {fileID: 0}
   maxWindForce: 100
+  windChangeRotationSpeed: 100
+  windChangeForceSpeed: 10
 --- !u!1 &2367518132822650980
 GameObject:
   m_ObjectHideFlags: 0

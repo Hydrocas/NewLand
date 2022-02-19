@@ -124,7 +124,11 @@ public class Boat : MonoBehaviour
     {
         previousSpeedGear = currentSpeedGear;
         currentSpeedGear = Mathf.Clamp(currentSpeedGear + gearInput, minSpeedGear, maxSpeedGear);
-        gearText.text = "Gear : " + currentSpeedGear;
+
+        if (gearText == null) 
+            Debug.Log("No Gear Text Serialized");
+        else
+            gearText.text = "Gear : " + currentSpeedGear;
 
         if (currentSpeedGear >= 0)
             DeploySail();
