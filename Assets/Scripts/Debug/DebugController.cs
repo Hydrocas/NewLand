@@ -34,14 +34,8 @@ public class DebugController : MonoBehaviour
         //scroll = GUI.BeginScrollView(new Rect(0, y + padding, Screen.width, historyLength - inputFieldHeight), scroll, viewport);
 
         GUI.backgroundColor = new Color(0, 0, 0, 0);
-        //inputText = GUI.TextField(new Rect(inputFieldHeight, y + padding, Screen.width - lineHeight, lineHeight), inputText);
-        inputText = GUILayout.TextField(inputText);
+        inputText = GUI.TextField(new Rect(inputFieldHeight, y + padding, Screen.width - lineHeight, lineHeight), "");
 
         Debug.Log(inputText);
-
-        if (Event.current.type == EventType.KeyDown && Event.current.character == '\n')
-        {
-            inputText = "";
-        }
     }
 }
