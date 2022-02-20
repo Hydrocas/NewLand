@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 1552745380}
   - component: {fileID: 1552745379}
   m_Layer: 5
-  m_Name: Filler
+  m_Name: VirusFiller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 1758913983}
   - component: {fileID: 1758913982}
   m_Layer: 5
-  m_Name: Filler
+  m_Name: LifeFiller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2591,7 +2591,7 @@ GameObject:
   - component: {fileID: 2029998526399175172}
   - component: {fileID: 4831362849384919760}
   m_Layer: 5
-  m_Name: Filler
+  m_Name: FoodFiller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
