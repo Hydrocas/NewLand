@@ -9,32 +9,35 @@ public class WeatherManager : MonoBehaviour
     [SerializeField] private bool testChangeWind = false;
     [SerializeField] private Transform windArrow = null;
     [SerializeField] private Text windForceText = null;
-    [SerializeField] private BeaufortLadder currentWindState = BeaufortLadder.Calm;
+    [SerializeField] private Text windForceBeaufortText = null;
+    [SerializeField] private Gradient beaufortGradient;
 
     [Header("Wind Settings")]
-    [SerializeField] private float maxWindForce = 100;
+    [SerializeField] private float maxWindForce = 130;
     [SerializeField] private float windChangeRotationSpeed = 100;
     [SerializeField] private float windChangeForceSpeed = 10;
     [SerializeField] private float delayToChangeWindInSeconds = 4;
 
-    private Dictionary<BeaufortLadder, Vector2> windForceSlices = new Dictionary<BeaufortLadder, Vector2> 
+    private Dictionary<int, Vector2> windForceSlices = new Dictionary<int, Vector2> 
     { 
-        { BeaufortLadder.Calm,              new Vector2(0, 1) },
-        { BeaufortLadder.VeryLightBreeze,   new Vector2(1, 5) },
-        { BeaufortLadder.LightBreeze,       new Vector2(5, 11) },
-        { BeaufortLadder.GentleBreeze,      new Vector2(11, 19) },
-        { BeaufortLadder.ModerateBreeze,    new Vector2(19, 28) },
-        { BeaufortLadder.CoolBreeze,        new Vector2(28, 38) },
-        { BeaufortLadder.StrongBreeze,      new Vector2(38, 49) },
-        { BeaufortLadder.StrongGusts,       new Vector2(49, 61) },
-        { BeaufortLadder.ViolentWind,       new Vector2(61, 74) },
-        { BeaufortLadder.VeryStrongWind,    new Vector2(74, 88) },
-        { BeaufortLadder.StrongStorm,       new Vector2(88, 102) },
-        { BeaufortLadder.ViolentStorm,      new Vector2(102, 117) },
-        { BeaufortLadder.Hurricane,         new Vector2(117, Mathf.Infinity) },
+        { 0, new Vector2(0, 1) },
+        { 1, new Vector2(1, 5) },
+        { 2, new Vector2(5, 11) },
+        { 3, new Vector2(11, 19) },
+        { 4, new Vector2(19, 28) },
+        { 5, new Vector2(28, 38) },
+        { 6, new Vector2(38, 49) },
+        { 7, new Vector2(49, 61) },
+        { 8, new Vector2(61, 74) },
+        { 9, new Vector2(74, 88) },
+        { 10, new Vector2(88, 102) },
+        { 11, new Vector2(102, 117) },
+        { 12, new Vector2(117, Mathf.Infinity) },
     };
 
     private static WeatherManager _instance;
+
+    private KeyValuePair<int, Vector2> currendWindForceSlice;
 
     private Coroutine windChangeDirectionRoutine;
     private Coroutine windChangeForceRoutine;
@@ -50,17 +53,17 @@ public class WeatherManager : MonoBehaviour
     private enum BeaufortLadder
     {
         Calm,
-        VeryLightBreeze,
-        LightBreeze,
-        GentleBreeze,
-        ModerateBreeze,
-        CoolBreeze,
-        StrongBreeze,
-        StrongGusts,
-        ViolentWind,
-        VeryStrongWind,
-        StrongStorm,
-        ViolentStorm,
+        Very_Light_Breeze,
+        Light_Breeze,
+        Gentle_Breeze,
+        Moderate_Breeze,
+        Fresh_Breeze,
+        Strong_Breeze,
+        High_Wind,
+        Violent_Wind,
+        Very_Violent_Wind,
+        Storm,
+        Violent_Storm,
         Hurricane
     }
 
@@ -133,6 +136,25 @@ public class WeatherManager : MonoBehaviour
 
             if (windForceText != null)
                 windForceText.text = Mathf.RoundToInt(_windForce) + " km/h";
+
+            foreach (KeyValuePair<int, Vector2> windForceSlice in windForceSlices)
+            {
+                if (_windForce >= windForceSlice.Value.x && _windForce < windForceSlice.Value.y)
+                {
+                    currendWindForceSlice = windForceSlice;
+
+                    string beaufortName = (BeaufortLadder)windForceSlice.Key + "";
+
+                    if (windForceBeaufortText != null)
+                    {
+                        windForceBeaufortText.color = beaufortGradient.Evaluate(windForceSlice.Key / 12f);
+                        windForceBeaufortText.text = beaufortName.Replace("_", " ") + " " + windForceSlice.Key;
+                    }
+                        
+
+                    break;
+                }
+            }
 
             yield return null;
         }

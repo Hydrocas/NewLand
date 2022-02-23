@@ -33,11 +33,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Depth_Fade: 18.75
-    - Smooth: 0.612
-    - Speed: 0.14
+    - Smooth: 1
+    - Speed: 0.19
     - Vector1_b477c45853f247c4b3ec903cfac6b438: 1.42
-    - Vector1_c892da3e47c54e8a865a0935bf75ad0a: 0.02
-    - scale: 1.49
+    - Vector1_c892da3e47c54e8a865a0935bf75ad0a: 0.04
+    - scale: 1.4
     m_Colors:
     - Color_07d66dbf459a427290c7b0403283d67f: {r: 1, g: 1, b: 1, a: 1}
     - Deep: {r: 0.19428623, g: 0.433604, b: 0.6981132, a: 1}

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ProceduralSkybox
+  m_Shader: {fileID: -6465566751694194690, guid: 263a91a4a5da1d343b3a4fb77a432750, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Cubemap_024552e5f4fd419fab8cb367f8364a82:
+        m_Texture: {fileID: 8900000, guid: 92309686d01a54c468374ac957abb90e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Cubemap_c759a976345247299292a0a847e70faf:
+        m_Texture: {fileID: 8900000, guid: 4451b8e5cafbfc248a8266b16e64f02c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - ConstellationIntensity: 0.2
+    - DayRatio: 0.7205001
+    - StarShowCurve: 0.9926493
+    - SunsetRatio: 0.59002805
+    - Vector1_431d6d9e316244cab20b8a099ab40df2: 0
+    - Vector1_4f3b0dcf5f024adbb9502e6c7e76956e: 0
+    - Vector1_5fd234a1a12241f29d2da7ecd6e80c94: 150
+    - Vector1_7de8585f8a064c109796c6b4a73e5138: 1.87
+    - Vector1_868d56290fd249e0b1ef60b0f98a4342: 321.07
+    - Vector1_9aedaf573f554037bf990943d372d4e0: 5
+    - Vector1_a06cdc3ff0d248dcb6bbf4bc3baf4d73: 0.4
+    - Vector1_ab86e0ad3e164357841756781d22d4a0: 0
+    - Vector1_d83135ffaaa44ef2b8ce82f9e9cb70a6: 1
+    - Vector1_e638a8eb044b44d4a82df0c08ec9110a: 0
+    - Vector1_fef010c07b31462fb97cc1c1ce3b6478: 2
+    m_Colors:
+    - Color_0bad8780128041818d670b40f65c4c7c: {r: 0, g: 0, b: 0, a: 0}
+    - Color_5d3b516bbf774fd2b71b78ca51f0d407: {r: 0.6462264, g: 1, b: 0.9895006, a: 0}
+    - Color_77023e1c2273440fb56b2da598ea7f10: {r: 0.2428842, g: 0.2, b: 0.5764706, a: 1}
+    - Color_e2eacb72dabb4db0a754363b2590c657: {r: 1, g: 0.43137255, b: 0, a: 0}
+    - Color_f18a8f6b3c4f4ab0a157b2ca41c275d0: {r: 0.4666667, g: 0.7098039, b: 0.9960784, a: 1}
+    - SunDirection: {r: 0, g: -0.4410002, b: 0.897507, a: 0}
+    - Vector2_3a2c0ac014874e0fbbd0e342bdce4c8d: {r: 8, g: 4, b: 0, a: 0}
+    - Vector3_10d48782c4134f4cb91d1eb21acf2bf5: {r: -1, g: -1, b: 0, a: 0}
+  m_BuildTextureStacks: []
