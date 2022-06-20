@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wind
   - Water
   - UI
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: front
     uniqueID: 747494421
+    locked: 0
+  - name: Wind
+    uniqueID: 3147259641
     locked: 0

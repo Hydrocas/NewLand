@@ -172,8 +172,6 @@ public class Boat : MonoBehaviour
         float rudderTurnRatio = Quaternion.Angle(transform.rotation, targetedRotation) / maxRudderRotation * signe;
 
         transform.rotation *= Quaternion.AngleAxis(rudderTurnRatio * velocity.magnitude * rotationSpeedWhenSailing * Time.deltaTime, transform.up);
-
-        Debug.Log(rudderTurnRatio * velocity.magnitude * rotationSpeedWhenSailing);
     }
 
     private void RotateSail(float inputValue)

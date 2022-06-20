@@ -97,7 +97,6 @@ public class TimeManager : MonoBehaviour
         skyboxMat.SetFloat("SunsetRatio", sunsetSunriseRatio);
         skyboxMat.SetVector("SunDirection", sunLight.transform.forward);
         skyboxMat.SetFloat("StarShowCurve", starShowCurve.Evaluate(dayRatio));
-        Debug.Log(sunsetSunriseRatio);
 
         RotateSun();
         RotateMoon();
