@@ -41,9 +41,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - ConstellationIntensity: 0.2
-    - DayRatio: 0.5721033
-    - StarShowCurve: 0.9763503
-    - SunsetRatio: 0.95819044
+    - DayRatio: 0.9944808
+    - StarShowCurve: 0.9999995
+    - SunsetRatio: 0
     - Vector1_431d6d9e316244cab20b8a099ab40df2: 0
     - Vector1_4f3b0dcf5f024adbb9502e6c7e76956e: 0
     - Vector1_5fd234a1a12241f29d2da7ecd6e80c94: 150
@@ -61,7 +61,7 @@ Material:
     - Color_77023e1c2273440fb56b2da598ea7f10: {r: 0.2428842, g: 0.2, b: 0.5764706, a: 1}
     - Color_e2eacb72dabb4db0a754363b2590c657: {r: 1, g: 0.43137255, b: 0, a: 0}
     - Color_f18a8f6b3c4f4ab0a157b2ca41c275d0: {r: 0.4666667, g: 0.7098039, b: 0.9960784, a: 1}
-    - SunDirection: {r: 0, g: -0.14420663, b: -0.9895476, a: 0}
+    - SunDirection: {r: 0, g: -0.9889616, b: -0.14817238, a: 0}
     - Vector2_3a2c0ac014874e0fbbd0e342bdce4c8d: {r: 8, g: 4, b: 0, a: 0}
     - Vector3_10d48782c4134f4cb91d1eb21acf2bf5: {r: -1, g: -1, b: 0, a: 0}
   m_BuildTextureStacks: []
